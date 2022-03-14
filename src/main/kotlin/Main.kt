@@ -12,12 +12,12 @@ fun main() {
 
 fun agoToText(seconds: Int): String {
     return when (seconds) {
-        in 0..MINUTE -> "Just now"
+        in 0..MINUTE -> "Только что"
         in MINUTE + 1..HOUR -> "${seconds / MINUTE} ${minute(seconds)} назад"
         in HOUR + 1..DAY -> "${seconds / HOUR} ${hour(seconds)} назад"
-        in DAY + 1..TWO_DAYS -> "Today"
-        in TWO_DAYS + 1..TREE_DAYS -> "Yesterday"
-        else -> "For a long time"
+        in DAY + 1..TWO_DAYS -> "Сегодня"
+        in TWO_DAYS + 1..TREE_DAYS -> "Вчера"
+        else -> "Давно"
     }
 }
 
